@@ -1,3 +1,8 @@
+# Steps
+ * `mix phoenix.new hello`
+ * `mix ecto.create`
+ * `mix phoenix.server`
+
 # Hello
 
 To start your Phoenix app:
