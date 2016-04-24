@@ -11,7 +11,12 @@ defmodule Rumbl.User do
 
   def changeset(model, params \\ :empty) do
     model
+      # cast:
+      #  - converts that naked map to a changeset
+      #  - limits the inbound parameters for security reason
       |> cast(params, ~w(name username), [])
+
+      # validation
       |> validate_length(:username, min: 1, max: 20)
   end
 end
