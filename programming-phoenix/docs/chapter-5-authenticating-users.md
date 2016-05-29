@@ -95,6 +95,22 @@ end
 
 #### Restricting Access
 
+
+```ruby
+def index(conn, _params) do case authenticate(conn) do  %Plug.Conn{halted: true} = conn -> conn  conn ->    users = Repo.all(User)    render conn, "index.html", users: users  end
+end
+```
+
+* Same can be applied to `show` but use plug to DRY
+* Like end points and routers, controllers also have their own plug pipeline.
+* Each plug in the contrroller pipeline is executed in order before the action is invodked
+* Controller pipeline lets us explicitly choose which actions fire
+
+##### Making a `authenticate` function plug
+* Function plug is any function that receives two arguments
+    * connection and options
+* Add `plug :authenticate when action in [:index, :show]`
+
 #### Plug Macro TLDR
 
 ```ruby

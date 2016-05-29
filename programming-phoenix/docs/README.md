@@ -22,3 +22,4 @@ Ready to run in production? Please [check our deployment guides](http://www.phoe
 * [Chapter 3 Controllers, Views, and Templates](chapter-3-controllers-views-and-templates.md)
 * [Chapter 4 Ecto and Changesets](chapter-4-ecto-and-changesets.md)
 * [Chapter 5 Authenticating users](chapter-5-authenticating-users.md)
+* [Chapter 6 Generators and Relationships](chapter-6-generators-and-relationships.md)
